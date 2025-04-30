@@ -1,4 +1,6 @@
-require_relative '../products/table.rb'
+# frozen_string_literal: true
+
+require_relative '../products/table'
 
 module Furniture
   module Modern

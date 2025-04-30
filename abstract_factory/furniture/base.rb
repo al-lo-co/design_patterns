@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Furniture
   class Base
     def create_chair = raise('not implemented')

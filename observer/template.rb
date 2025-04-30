@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SimpleSubject
   def initialize
     @observers = []
@@ -22,4 +24,4 @@ end
 subject = SimpleSubject.new
 observer = SimpleObserver.new
 subject.add_observer(observer)
-subject.notify_observers("Hello World")
+subject.notify_observers('Hello World')

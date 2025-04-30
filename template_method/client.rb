@@ -1,5 +1,7 @@
-require "date"
-require "json"
+# frozen_string_literal: true
+
+require 'date'
+require 'json'
 
 class Report
   class << self
@@ -29,13 +31,13 @@ class Report
 
     private
 
-      def header = "#{year} Report"
-      def footer = "#{year} @ Copyright Acme Inc."
-      def spacer = "#{'-' * 72}"
-      def year = Date.today.year.to_s
+    def header = "#{year} Report"
+    def footer = "#{year} @ Copyright Acme Inc."
+    def spacer = ('-' * 72).to_s
+    def year = Date.today.year.to_s
   end
 end
 
-data = "This is some data I want to put in my report"
+data = 'This is some data I want to put in my report'
 
 puts Report.call(data, format: :json)

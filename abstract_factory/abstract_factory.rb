@@ -1,6 +1,8 @@
-#isolate conditional instantiations objects
+# frozen_string_literal: true
 
-#Product interface
+# isolate conditional instantiations objects
+
+# Product interface
 class Table
   def leg_count = raise('not implemented')
 end
@@ -25,13 +27,13 @@ class VintageTable < Table
   def material = 'wood'
 end
 
-#abstract factory, the abstract class defines the interface of the variant type
+# abstract factory, the abstract class defines the interface of the variant type
 class FurnitureFactory
   def create_chair = raise('not implemented')
   def create_table = raise('not implemented')
 end
 
-#the variant type class decides the instance type
+# the variant type class decides the instance type
 class ModernFurnitureFactory < FurnitureFactory
   def create_chair = ModernChair.new
   def create_table = ModernTable.new
@@ -42,8 +44,8 @@ class VintageFurnitureFactory < FurnitureFactory
   def create_table = VintageTable.new
 end
 
-#Here is the magic, the methods are the same with different result after call any factory
-def client_code factory
+# Here is the magic, the methods are the same with different result after call any factory
+def client_code(factory)
   chair = factory.create_chair
   table = factory.create_table
 
@@ -56,5 +58,5 @@ modern_factory = ModernFurnitureFactory.new
 vintage_factory = VintageFurnitureFactory.new
 
 client_code(modern_factory)
-puts "-" * 72
+puts '-' * 72
 client_code(vintage_factory)

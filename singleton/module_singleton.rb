@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ModuleSingleton
   def self.name=(name)
     @name = name

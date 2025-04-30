@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 class ClassSingleton
-  def self.name=(name)
-    @name = name
+  class << self
+    attr_writer :name
   end
 
-  def self.name
-    @name
+  class << self
+    attr_reader :name
   end
 end
 

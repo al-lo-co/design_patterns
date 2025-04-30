@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'active_support/core_ext/module/delegation'
 
 class Product
@@ -39,11 +41,11 @@ class Order
 end
 
 # Create instances of Product
-product1 = Product.new("T-shirt", 20)
-product2 = Product.new("Pants", 40)
+product1 = Product.new('T-shirt', 20)
+product2 = Product.new('Pants', 40)
 
 # Create an instance of Customer
-customer = Customer.new("John", "john@example.com")
+customer = Customer.new('John', 'john@example.com')
 
 # Create an instance of Order and add products
 order = Order.new(customer)
@@ -54,6 +56,6 @@ order.add_product(product2)
 total = order.total_amount
 
 puts "Customer: #{order.name}"
-puts "Products: "
+puts 'Products: '
 order.products.each { |product| puts "- #{product.name}: $#{product.price}" }
 puts "Total to pay: $#{total}"

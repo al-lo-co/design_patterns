@@ -1,4 +1,6 @@
-require_relative '../products/chair.rb'
+# frozen_string_literal: true
+
+require_relative '../products/chair'
 
 module Furniture
   module Vintage

@@ -1,9 +1,11 @@
-require_relative "./base_response"
+# frozen_string_literal: true
+
+require_relative './base_response'
 
 class JsonResponse < BaseResponse
   def content_type!
     @response.headers = @response
-      .headers
-      .merge("Content-Type" => "application/json")
+                        .headers
+                        .merge('Content-Type' => 'application/json')
   end
 end

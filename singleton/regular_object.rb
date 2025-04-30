@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RegularObject
   attr_reader :name
 

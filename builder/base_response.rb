@@ -1,5 +1,7 @@
-require_relative "./response"
-require_relative "./statuses"
+# frozen_string_literal: true
+
+require_relative './response'
+require_relative './statuses'
 
 class BaseResponse
   include Statuses
@@ -12,8 +14,8 @@ class BaseResponse
 
   def etag!
     @response.headers = @response
-      .headers
-      .merge("ETag" => ("a".."z").to_a.sample(16).join)
+                        .headers
+                        .merge('ETag' => ('a'..'z').to_a.sample(16).join)
   end
 
   def body=(body)
@@ -22,12 +24,13 @@ class BaseResponse
   end
 
   def content_type!
-    raise "Not implemented."
+    raise 'Not implemented.'
   end
 
   private
 
-  def validate_body!(body) #validator needed for the pattern
-    raise("Bad payload.") if body.nil?
+  # validator needed for the pattern
+  def validate_body!(body)
+    raise('Bad payload.') if body.nil?
   end
 end
