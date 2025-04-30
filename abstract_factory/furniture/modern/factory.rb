@@ -1,5 +1,7 @@
-require_relative './chair.rb'
-require_relative './table.rb'
+# frozen_string_literal: true
+
+require_relative './chair'
+require_relative './table'
 
 module Furniture
   module Modern

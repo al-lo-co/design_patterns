@@ -1,5 +1,7 @@
-require_relative "./html_response"
-require_relative "./json_response"
+# frozen_string_literal: true
+
+require_relative './html_response'
+require_relative './json_response'
 
 class BaseController
   def initialize(params:)
@@ -9,7 +11,7 @@ class BaseController
   def build(name)
     raise("Dude! I can't read your mind.") unless format_valid?(name)
 
-    Object.const_get("#{name.capitalize}Response").new #constructor depends of the input
+    Object.const_get("#{name.capitalize}Response").new # constructor depends of the input
   end
 
   private

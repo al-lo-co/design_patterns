@@ -1,4 +1,6 @@
-require_relative "./base_controller.rb"
+# frozen_string_literal: true
+
+require_relative './base_controller'
 
 class ProfileController < BaseController
   def index
@@ -8,7 +10,7 @@ class ProfileController < BaseController
     builder.etag!
     builder.created!
     response = builder.response
-  
+
     puts response
   end
 

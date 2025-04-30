@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Status
   attr_reader :code, :message
 
-  def initialize(code: 200, message: "OK")
+  def initialize(code: 200, message: 'OK')
     @code = code
     @message = message
   end

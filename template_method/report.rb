@@ -1,4 +1,6 @@
-require "date"
+# frozen_string_literal: true
+
+require 'date'
 
 class Report
   class << self
@@ -9,8 +11,8 @@ class Report
 
     private
 
-      def format = raise(NoMethodError, "implement in subclass!")
+    def format = raise(NoMethodError, 'implement in subclass!')
 
-      def year = Date.today.year.to_s
+    def year = Date.today.year.to_s
   end
 end

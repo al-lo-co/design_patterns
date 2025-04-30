@@ -1,4 +1,6 @@
-require_relative "./furniture/factory.rb"
+# frozen_string_literal: true
+
+require_relative './furniture/factory'
 
 class Endpoint
   def self.category(params)
@@ -6,14 +8,14 @@ class Endpoint
     factory = Furniture::Factory.for(category)
     chair = factory.create_chair
     table = factory.create_table
-  
-    puts <<~TEXT 
+
+    puts <<~TEXT
       Chair legs #{chair.leg_count}
       Table material #{table.material}
     TEXT
   end
 end
 
-params = { "category" => 'modern' }
+params = { 'category' => 'modern' }
 
 Endpoint.category(params)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EventDispatcher
   def initialize
     @listeners = Hash.new { |h, k| h[k] = [] }
@@ -17,7 +19,7 @@ class EventDispatcher
 end
 
 class LoggerListener
-  def initialize(log_prefix = "[Logger]")
+  def initialize(log_prefix = '[Logger]')
     @log_prefix = log_prefix
   end
 
@@ -45,7 +47,7 @@ end
 # Usage
 dispatcher = EventDispatcher.new
 dispatcher.subscribe(:user_created, LoggerListener.new)
-dispatcher.subscribe(:user_created, EmailNotifier.new("admin@example.com"))
+dispatcher.subscribe(:user_created, EmailNotifier.new('admin@example.com'))
 dispatcher.subscribe(:user_created, AnalyticsTracker.new)
 
-dispatcher.broadcast(:user_created, "User John has been created.")
+dispatcher.broadcast(:user_created, 'User John has been created.')

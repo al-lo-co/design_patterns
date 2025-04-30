@@ -1,4 +1,6 @@
-require_relative "./report.rb"
+# frozen_string_literal: true
+
+require_relative './report'
 
 class TXTReport < Report
   class << self

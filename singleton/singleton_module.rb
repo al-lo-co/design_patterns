@@ -1,4 +1,6 @@
-require "singleton"
+# frozen_string_literal: true
+
+require 'singleton'
 
 # Fixes two issues, Ensure that a class has just a single instance and Provide a global access point to that instance
 class SingletonModule
@@ -8,7 +10,7 @@ class SingletonModule
 end
 
 sdb_users = SingletonModule.instance
-sdb_users.name = ("users")
+sdb_users.name = ('users')
 
 puts sdb_users.name
 
