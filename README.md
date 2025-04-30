@@ -19,12 +19,14 @@ Ensures that a class has only one instance and provides a global point of access
 ### 📋 Template Method
 Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It allows subclasses to redefine certain steps of an algorithm without changing its overall structure.
 
+### 📋 Observer
+Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified automatically. This decouples the subject from the observers.
+
 ## Future Patterns to Explore
 
 Here are some design patterns planned for future study and implementation:
 
 - **Strategy** – Define a family of algorithms, encapsulate each one, and make them interchangeable.
-- **Observer** – Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified.
 - **Decorator** – Attach additional responsibilities to an object dynamically.
 - **Adapter** – Convert the interface of a class into another interface that clients expect.
 - **Facade** – Provide a unified interface to a set of interfaces in a subsystem.
