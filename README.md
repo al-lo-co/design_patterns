@@ -22,11 +22,13 @@ Defines the skeleton of an algorithm in a method, deferring some steps to subcla
 ### 📋 Observer
 Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified automatically. This decouples the subject from the observers.
 
+### 📋 Strategy
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it.
+
 ## Future Patterns to Explore
 
 Here are some design patterns planned for future study and implementation:
 
-- **Strategy** – Define a family of algorithms, encapsulate each one, and make them interchangeable.
 - **Decorator** – Attach additional responsibilities to an object dynamically.
 - **Adapter** – Convert the interface of a class into another interface that clients expect.
 - **Facade** – Provide a unified interface to a set of interfaces in a subsystem.
