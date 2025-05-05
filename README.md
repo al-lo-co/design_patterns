@@ -25,11 +25,13 @@ Defines a one-to-many dependency between objects so that when one object changes
 ### 📋 Strategy
 Defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it.
 
+### 📋 Decorator
+Attach additional responsibilities to an object dynamically without altering its structure. It's a flexible alternative to subclassing for adding functionality.
+
 ## Future Patterns to Explore
 
 Here are some design patterns planned for future study and implementation:
 
-- **Decorator** – Attach additional responsibilities to an object dynamically.
 - **Adapter** – Convert the interface of a class into another interface that clients expect.
 - **Facade** – Provide a unified interface to a set of interfaces in a subsystem.
 - **Command** – Encapsulate a request as an object, thereby letting you parameterize clients with different requests.
