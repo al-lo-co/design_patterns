@@ -28,11 +28,13 @@ Defines a family of algorithms, encapsulates each one, and makes them interchang
 ### 📋 Decorator
 Attach additional responsibilities to an object dynamically without altering its structure. It's a flexible alternative to subclassing for adding functionality.
 
+### 📋 Adapter
+Convert the interface of a class into another interface that clients expect.
+
 ## Future Patterns to Explore
 
 Here are some design patterns planned for future study and implementation:
 
-- **Adapter** – Convert the interface of a class into another interface that clients expect.
 - **Facade** – Provide a unified interface to a set of interfaces in a subsystem.
 - **Command** – Encapsulate a request as an object, thereby letting you parameterize clients with different requests.
 - **State** – Allow an object to alter its behavior when its internal state changes.
